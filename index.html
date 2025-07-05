@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kata Kata Buat Isriwil🤭</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+      background: black;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      color: white;
+    }
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://img1.pixhost.to/images/6987/618732962_kyzo.jpg') no-repeat center center;
+      background-size: cover;
+      filter: blur(8px) brightness(0.4);
+      z-index: -2;
+    }
+    .scanline {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: repeating-linear-gradient(to bottom, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 3px);
+      pointer-events: none;
+      animation: moveScan 3s linear infinite;
+      z-index: -1;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+    .circle-img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      margin-bottom: 40px;
+      box-shadow: 0 0 30px white;
+    }
+    .glitch-title {
+      font-size: 52px;
+      color: red;
+      font-weight: bold;
+      animation: glitch 1s infinite;
+      margin-bottom: 40px;
+    }
+    .line {
+      font-size: 36px;
+      color: white;
+      margin: 15px 0;
+    }
+    .footer {
+      position: absolute;
+      bottom: 4%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 26px;
+      color: red;
+      font-weight: bold;
+      animation: glitch 1s infinite;
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red, -2px 0 blue; }
+      20% { text-shadow: -2px 0 red, 2px 0 blue; }
+      40% { text-shadow: 2px 2px red, -2px -2px blue; }
+      60% { text-shadow: -2px -2px red, 2px 2px blue; }
+      80% { text-shadow: 2px -2px red, -2px 2px blue; }
+      100% { text-shadow: 0 0 red, 0 0 blue; }
+    }
+    @keyframes moveScan {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 100%; }
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="scanline"></div>
+
+  <div class="container">
+    <img class="circle-img" src="https://img1.pixhost.to/images/6987/618732962_kyzo.jpg" alt="logo" />
+    <div class="glitch-title">Kata kata buat isriwil</div>
+    <div class="line">Perang boleh, bego jangan, warga sipil ko dirudal💩</div>
+    <div class="line">Siapa lagi kalo bukan isriwil🐽💩</div>
+  </div>
+
+  <div class="footer">Deface By Zynxz</div>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f27f98ee5.mp3" type="audio/mpeg" />
+  </audio>
+</body>
+</html>
